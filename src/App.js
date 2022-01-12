@@ -26,7 +26,7 @@ function App() {
           return { ...oldValues, token: null };
         });
       }
-      // call refreshToken every 5 minutes to renew the authentication token.
+      // call refreshToken every 5 minutes to renew auth token.
       setTimeout(verifyUser, 5 * 60 * 1000);
     });
   }, [setUserContext]);
@@ -40,7 +40,6 @@ function App() {
    */
   const syncLogout = useCallback((event) => {
     if (event.key === "logout") {
-      // If using react-router-dom, you may call history.push("/")
       window.location.reload();
     }
   }, []);
