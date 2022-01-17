@@ -29,7 +29,7 @@ const Login = () => {
                     if (response.status === 400) {
                         setError("Please fill all the fields correctly!")
                     } else if (response.status === 401) {
-                        setError("Invalid email and password combination.")
+                        setError("Invalid username and password combination.")
                     } else {
                         setError(genericErrorMessage)
                     }
